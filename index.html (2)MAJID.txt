@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر الخشب ومواد البناء</title>
+    <style>
+        body {
+            font-family: "Tahoma", sans-serif;
+            margin: 0;
+            background: #f4f4f4;
+            direction: rtl;
+        }
+        header {
+            background: #0d3b66;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        nav {
+            background: #145da0;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+            font-size: 18px;
+        }
+        .hero {
+            background: url('https://i.imgur.com/VHFn7kM.jpeg') no-repeat center;
+            background-size: cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px black;
+        }
+        .products {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+        .product {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 7px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+        .product img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .product button {
+            margin-top: 10px;
+            padding: 10px;
+            background: #0d3b66;
+            color: white;
+            border: none;
+            width: 100%;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .product button:hover {
+            background: #145da0;
+        }
+        footer {
+            background: #0d3b66;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>متجر الخشب ومواد البناء - المغرب</header>
+
+<nav>
+    <a href="#">الرئيسية</a>
+    <a href="#">الخشب</a>
+    <a href="#">مواد البناء</a>
+    <a href="#">العروض</a>
+    <a href="#">تواصل معنا</a>
+</nav>
+
+<div class="hero">
+    أجود أنواع الخشب ومواد البناء في المغرب
+</div>
+
+<section class="products">
+
+    <div class="product">
+        <img src="https://i.imgur.com/zlxU35L.jpeg" alt="خشب سويدي">
+        <h3>خشب سويدي ممتاز</h3>
+        <p>السعر: 120 درهم للمتر</p>
+        <button onclick="order('خشب سويدي ممتاز')">اطلب الآن</button>
+    </div>
+
+    <div class="product">
+        <img src="https://i.imgur.com/8pO2pyV.jpeg" alt="خشب MDF">
+        <h3>خشب MDF</h3>
+        <p>السعر: 95 درهم للمتر</p>
+        <button onclick="order('خشب MDF')">اطلب الآن</button>
+    </div>
+
+    <div class="product">
+        <img src="https://i.imgur.com/5HVxQPN.jpeg" alt="خشب زان">
+        <h3>خشب زان</h3>
+        <p>السعر: 150 درهم للمتر</p>
+        <button onclick="order('خشب زان')">اطلب الآن</button>
+    </div>
+
+    <div class="product">
+        <img src="https://i.imgur.com/LZIxG1s.jpeg" alt="خشب بناء">
+        <h3>خشب البناء</h3>
+        <p>السعر: 80 درهم للمتر</p>
+        <button onclick="order('خشب البناء')">اطلب الآن</button>
+    </div>
+
+</section>
+
+<script>
+function order(product) {
+    let phone = "2126XXXXXXXX"; // ضع رقم واتساب هنا
+    window.location.href = `https://wa.me/${phone}?text=السلام عليكم، أريد طلب: ${product}`;
+}
+</script>
+
+<footer>
+    جميع حقوق الطبع محفوظة © 2025 - متجر مواد البناء بالمغرب  
+</footer>
+
+</body>
+</html>
